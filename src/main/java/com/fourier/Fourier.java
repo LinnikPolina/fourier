@@ -53,10 +53,7 @@ public class Fourier {
         }
         output = fftForward(output);
         for (int i = 0; i < n; i++) {
-            output[i] = output[i].conjugate();
-        }
-        for (int i = 0; i < n; i++) {
-            output[i] = output[i].divide(n);
+            output[i] = output[i].conjugate().divide(n);
         }
         return output;
     }
